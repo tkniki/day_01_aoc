@@ -30,14 +30,14 @@ namespace day_01
         }
 
         //part 2:
-        static void CountSumIncrease(int[] arr)
+        static int CountSumIncrease(int[] arr)
         {
            int sum1 = 0;
            int increaseCount = 0;
            for (int i = 0; i < arr.Length-2; i++)
            {
                 int sum2 = arr[i] + arr[i + 1] + arr[i + 2];
-                Console.WriteLine(sum2);
+                //Console.WriteLine(sum2);
                 if (i != 0 && sum2 > sum1)
                 {
                     increaseCount++;
@@ -45,7 +45,7 @@ namespace day_01
                 sum1 = sum2;
            }
 
-            Console.WriteLine(increaseCount);
+            return increaseCount;
             
         }
 
@@ -65,7 +65,7 @@ namespace day_01
 
             //part 2:
             /*int[] example = { 199, 200, 208, 210, 200, 207, 240, 269, 260, 263 };*/
-            CountSumIncrease(measurements);
+            Console.WriteLine(CountSumIncrease(measurements)); 
         }
     }
 }
