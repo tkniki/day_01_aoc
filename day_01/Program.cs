@@ -7,11 +7,13 @@ namespace day_01
     {
         static Boolean DoesItIncrease (int[] arr, int index)
         {
-            if (index != 0 && arr[index] > arr[index-1])
+            /*if (index != 0 && arr[index] > arr[index-1])
             {
                return true;
             }
-            return false;
+            return false;*/
+            //shorter solution:
+            return (index != 0 && arr[index] > arr[index-1]);
         }
 
         static int CountIncreased (int[] arr)
@@ -26,6 +28,8 @@ namespace day_01
             }
             return num;
         }
+
+        
 
         static void Main(string[] args)
         {
